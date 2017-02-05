@@ -14,4 +14,7 @@ Check docs for more details here:  https://kubernetes.io/docs/user-guide/service
 ## Usage
 To use the service maps url path to bigquery project, dataset and table name.
 
-Example call to project: ninja-project-1342 dataset: weapons table: knives would result in: http://localhost:8080/ninja-project-1342/weapons/knives
+Example call to project: ninja-project-1342 dataset: weapons table: knives;
+would result in: 
+
+http://localhost:8080/ninja-project-1342/weapons/knives
