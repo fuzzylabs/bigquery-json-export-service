@@ -18,3 +18,14 @@ Example call to project: ninja-project-1342 dataset: weapons table: knives;
 would result in: 
 
 http://localhost:8080/ninja-project-1342/weapons/knives
+
+## Using with Cloud Functions
+
+1. Update index.js with your desired credential sha-256 hashes
+2. Create a bucket for functions if not present yet
+3. Deploy the function as per below:
+
+`gcloud beta functions deploy bqJsonExporter --stage-bucket {bucket name} --trigger-http`
+
+Test the function using by calling it via browser: 
+https://us-central1-ninja-project-1342.cloudfunctions.net/bqJsonExporter/ninja-project-1342/weapons/knives
