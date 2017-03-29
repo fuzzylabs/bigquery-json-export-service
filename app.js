@@ -4,7 +4,7 @@ const express = require('express');
 const bq = require('@google-cloud/bigquery')();
 const app = express();
 
-app.get('/:project/:dataset/:table', (req, res) => {
+app.get('/bqJsonExporter/:project/:dataset/:table', (req, res) => {
   var p = req.params
   var target = '`' + p.project + '.' + p.dataset + '.' + p.table + '`'
   var query = 'SELECT * FROM ' + target;
